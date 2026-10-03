@@ -1,41 +1,32 @@
 # House Price Prediction - Machine Learning
 
 ## Project Overview
-Built Machine Learning models to predict house 
-prices using 1,460 properties and 81 features 
-from the Kaggle House Prices dataset.
+Built and compared Linear Regression and Random Forest models to predict house sale prices using 1,460 homes and the 10 features most correlated with price.
 
 ## Tools Used
 - Python
 - Pandas
-- Scikit-learn
+- Scikit-learn (Linear Regression, Random Forest)
 - Matplotlib
 - Seaborn
-- Jupyter Notebook
 
-## Models Built
-- Linear Regression — 79.68% accuracy
-- Random Forest — 88.56% accuracy
+## Model Performance
+| Model | R² Score | RMSE |
+|---|---|---|
+| Linear Regression | 0.797 | $39,475 |
+| Random Forest | 0.886 | $29,619 |
 
 ## Key Insights
-1. Overall Quality is the strongest predictor 
-   at 79% correlation with sale price
-2. Living Area size is second at 71% correlation
-3. NridgHt is most expensive neighborhood 
-   at $315,000 median price
-4. Random Forest predicts within $29,619 
-   of actual price on average
+![House Price Dashboard](house_price_dashboard.png)
 
-## Skills Demonstrated
-- Machine Learning with Scikit-learn
-- Feature Engineering and Selection
-- Model Evaluation (R2 Score, RMSE)
-- Data Visualization and EDA
+1. Overall Quality has the strongest correlation with sale price (0.79) and accounts for about 57% of Random Forest feature importance
+2. Living Area is the second strongest factor, with a correlation of 0.71
+3. The most expensive neighborhoods are NridgHt ($315,000 median), NoRidge ($301,500), and StoneBr ($278,000)
+4. Random Forest outperformed Linear Regression, reducing typical prediction error by about $10,000
+5. Both models underpredict the most expensive homes (above $400,000), likely because there are few high-priced examples to learn from
 
 ## Dataset
-Kaggle House Prices Advanced Regression 
-Techniques Competition Dataset
+House Prices - Advanced Regression Techniques (Kaggle competition)
 
 ## View Full Project on Kaggle
-https://www.kaggle.com/code/lalitacanada/house-price-prediction-machine-learning# house-price-prediction-ml
-House Price Prediction using Machine Learning - Linear Regression and Random Forest with 88.56% accuracy
+https://www.kaggle.com/code/lalitacanada/house-price-prediction-machine-learning
